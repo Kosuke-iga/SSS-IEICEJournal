@@ -15,6 +15,29 @@
 \usepackage[fleqn]{amsmath}
 \usepackage{newtxtext}
 \usepackage[varg]{newtxmath}
+
+\setcounter{page}{1}
+%\breakauthorline{}% breaks lines after the n-th author
+
+\field{D}
+%\SpecialIssue{}
+%\SpecialSection{}
+%\theme{}
+\title{Rogue Access Point Detection by Using ARP Failure under the MAC Address Duplication}
+%\title[title for header]{title}
+%\titlenote{}
+\authorlist{
+\authorentry[igarashi@sasase.ics.keio.ac.jp]{Kosuke Igarashi}{s}{keio}\MembershipNumber{}
+\authorentry[kato@sasase.ics.keio.ac.jp]{Hiroya Kato}{m}{keio}\MembershipNumber{1722956}
+\authorentry[sasase@ics.keio.ac.jp]{Iwao Sasase}{f}{keio}\MembershipNumber{7908862} % keio はラベル
+}
+\affiliate[keio]{Dept. of Information and Computer Science, Keio University\\ 3-14-1 Hiyoshi, Kohoku, Yokohama, Kanagawa 223-8522, Japan}
+%\paffiliate[present affiliate label]{Presently, the author is with the }
+
+\received{2015}{1}{1}
+\revised{2015}{1}{1}
+
+%% <local definitions here>
 %target AP
 \newcommand{\SSID}{\rm SSID_{connect}}
 \newcommand{\tarAP}{\rm AP_{connect}}
@@ -29,33 +52,6 @@
 \newcommand{\stbA}{m_{\rm A}}
 \newcommand{\stbb}{m_{\rm b}}
 \newcommand{\stbB}{m_{\rm B}}
-
-\setcounter{page}{1}
-%\breakauthorline{}% breaks lines after the n-th author
-
-\field{}
-%\SpecialIssue{}
-%\SpecialSection{}
-%\theme{}
-\title{Rogue Access Point Detection by Using ARP Failure under the MAC Address Duplication}
-%\title[title for header]{title}
-%\titlenote{}
-\authorlist{%
- \authorentry{}{}{}\MembershipNumber{}
-% \authorentry{name}{membership}{affiliate label}\MembershipNumber{}
-% \authorentry{name}{membership}{affiliate label}[present affiliate label]\MembershipNumber{}
-% \authorentry[e-mail address]{name}{membership}{affiliate label}\MembershipNumber{}
-% \authorentry[e-mail address]{name}{membership}{affiliate label}[present affiliate label]\MembershipNumber{}
-}
-\affiliate[affiliate label]{The author is with the 
-}
-%\paffiliate[present affiliate label]{Presently, the author is with the }
-
-\received{2015}{1}{1}
-\revised{2015}{1}{1}
-
-%% <local definitions here>
-
 %% </local definitions here>
 
 \begin{document}
@@ -77,10 +73,10 @@ True positive rate and false positive rate are 31.0\% higher and 9.0\% lower tha
 Furthermore, the proposed scheme can detect RAPs accurately in real environment where the previous scheme cannot.
 \end{summary}
 \begin{keywords}
-
+Evil Twin Attack, Rogue Access Point, Address Resolution Protocol
 \end{keywords}
 
-\section{INTRODUCTION}
+\section{Introduction}
 With the rapid development of wireless communication techniques, Wi-Fi is deployed as the most commonly used Internet access technology and keeps spreading all over the world\cite{bg-evi}.
 It is located in everywhere of our daily life, such as shopping malls, restaurants, public transit systems and so on.
 While the free access to Wi-Fi network attracts a large number of users, it also allows adversaries to launch attacks against the users just by setting up a Rogue Access Point (RAP) on their laptop in the network, which is called ``Evil Twin Attack (ETA) ''\cite{laptop-evi}.
@@ -129,7 +125,7 @@ The proposed scheme is explained in Section \ref{sec:4}.
 Various evaluation results are shown in Section \ref{sec:5}.
 Finally, the conclusions of this paper are presented in Section \ref{sec:6}.
 
-\section{RELATED WORKS}\label{sec:2}
+\section{Related Works}\label{sec:2}
 RAP detection schemes are mainly classified into two categories: network administrator side detections and user side detections.
 Network administrator side detections \cite{prapd}, \cite{clockskew} focus on the fingerprints of an AP such as RSSI and clock skew which cannot be spoofed by an adversary.
 A RAP can be detected by comparing its fingerprints with those in the predefined whitelist collected by equipments such as traffic sensors in each Wi-Fi network.
@@ -153,7 +149,7 @@ Compared with legitimate networks, extra hop results in several measurable chang
 
 Mustafa et al. \cite{rtt} differentiate RAPs from LAPs by measuring the RTT between the client and the DNS server through a AP or APs.
 Because there exists the extra hop caused by the RAP on the path, RTT is longer than that in the case where a client directly connects to the LAP.
-Although that scheme is useful only for the case where the adversary sets RAP up on the laptop, Jang et al. \cite{previous} reveal the fact that the computational power of the software bridging mainly accounts for the packet delay.
+Although that scheme is useful only for the case where the adversary sets a RAP up on the laptop, Jang et al. \cite{previous} reveal the fact that the computational power of the software bridging mainly accounts for the packet delay.
 Thus, the adversary can evade the detection based on packet delay by utilizing hardware-based RAPs having little bridging delay unlike software-based RAPs.
 
 In order to detect both types of RAPs, namely, software-based and hardware-based ones, Jang et al. focus on two communication channels utilized by a RAP between a client and LAP\cite{previous}.
@@ -161,14 +157,14 @@ Whereas a RAP intervenes between a client and a LAP, two distinct channels are u
 This is because a RAP can be detected by \cite{rtt} because of latency caused by the channel interference if the same channel is used in the both paths.
 For example, it is assumed that channel 1 is used as the channel between a client and a RAP, and channel 6 is that between the RAP and a LAP.
 That scheme detects the RAP by finding out the presence of these two distinct channels with the throughput of the transmission from the client to the DNS server.
-That scheme is the most robust user side detection which is independent of the performance of the RAP because it is the countermeasure against a reasonable attack model where hardware-based RAP is used.
+That scheme is the most robust user side detection which is independent of the performance of the RAP because it is the countermeasure against a reasonable attack model where the hardware-based RAP is used.
 Thus, we select the scheme \cite{previous} as the previous scheme and elaborate it in the next section.
 %In the next section, we elaborate the previous scheme.
 
-\section{ATTACK MODEL AND PREVIOUS SCHEME}\label{sec:3}
+\section{Attack Model and Previous Scheme}\label{sec:3}
 \begin{figure}[t]
     \begin{center}
-        \includegraphics[scale=0.5]{attack-model/attack-model.pdf}
+        \includegraphics[scale=0.48]{attack-model/attack-model.pdf}
         \caption{The Attack Model}
         \label{fig:model}
     \end{center}
@@ -199,7 +195,7 @@ The extra channel cannot be observed directly from the client.
 The previous scheme detects the RAP by finding out this second channel on the basis of the decline in the throughput.
 In order to decrease the throughput, the previous scheme saturates the channel used between a LAP and the RAP by intentionally interfering with an additional equipment in a client.
 For example, when a client is using channel 1 with the connected AP whose benignancy is unidentified, the equipment in a client transmits a large number of packets to all the channel except channel 1 to saturate traffic on the path.
-If there exists the other channel on the route, the decline in the throughput can be observed by the client, and the presence of RAP is revealed.
+If there exists the other channel on the route, the decline in the throughput can be observed by the client, and the presence of the RAP is revealed.
 
 \subsubsection{Shortcoming of the Previous Scheme}\label{sec:shortcoming}
 %\begin{figure}[t]
@@ -232,7 +228,7 @@ On the contrary, it is degraded to 0.765 in random traffic.
 The previous scheme is subject to traffic environment, which can lead to degradation of the detection performance.
 Thus, the requirement that we must satisfy is to leverage factors which are independent of the network traffic.
 
-\section{PROPOSED SCHEME}\label{sec:4}
+\section{Proposed Scheme}\label{sec:4}
 In order to meet the requirements mentioned in Section \ref{sec:shortcoming}, in this paper, we propose RAP detection by using ARP failure under the MAC address duplication.
 In the following subsections, we explain the idea and the algorithm in detail.
 
@@ -278,7 +274,7 @@ In addition, the proposed scheme is not affected by a spoofed MAC address becaus
 \subsection{Algorithm} \label{sec:alg}
 \begin{figure}[t]
     \begin{center}
-        \includegraphics[scale=0.42]{flowchart/flowchart.pdf}
+        \includegraphics[scale=0.43]{flowchart/flowchart.pdf}
         \caption{The Flowchart of the Proposed Scheme}
         \label{fig:flowchart}
     \end{center}
@@ -313,7 +309,7 @@ Finally, in the third procedure, the ARP reply packets whose destination is set 
 If the packets do not reach the client, the $\tarAP$ can be revealed as the RAP which exists between the client and the LAP with $\inputMAC$, and the detection phase is finished.
 Otherwise, the benignancy of the $\tarAP$ still cannot be judged by the AP with $\inputMAC$.
 In this case, the same procedures in the flowchart are repeatedly conducted for another $\inputMAC$ in $M_{A_{\rm all}}$ until the RAP is detected.
-If the detection phase is carried out for all $\inputMAC$ without the detection of RAP, the $\tarAP$ is declared as a LAP.
+If the detection phase is carried out for all $\inputMAC$ without the detection of a RAP, the $\tarAP$ is declared as a LAP.
 \begin{figure*}[ht]
     \begin{minipage}{0.33\hsize}
         \begin{center}
@@ -338,7 +334,7 @@ If the detection phase is carried out for all $\inputMAC$ without the detection 
     \end{minipage}
 \vspace{-1zh}
 \end{figure*}
-\section{EVALUATION}\label{sec:5}
+\section{Evaluation}\label{sec:5}
 In order to demonstrate the effectiveness of the proposed scheme, we compare it with the previous scheme \cite{previous} which interferes the channel between a LAP and a RAP.
 
 The metrics of the evaluation are ACCuracy (ACC), True Positive Rate (TPR), and False Positive Rate (FPR) defined as
@@ -408,7 +404,7 @@ The experiments are conducted 100 times in each situation around 2:00pm on a wee
 $\Delta t$ is set to 15 seconds enough to get ARP reply packets.
 \begin{figure}[t]
     \begin{center}
-        \includegraphics[scale=0.5]{starbucks/starbucks.pdf}
+        \includegraphics[scale=0.64]{starbucks/starbucks.pdf}
         \caption{The Network Model in the Cafe}
         \label{fig:sbx}
     \end{center}
@@ -442,7 +438,7 @@ In contrast, a RAP is basically introduced near a connecting LAP not to cause tr
 Thus, we assume that an AP can be judged whether it is a LR or not on the basis of this idea.
 In the future, we plan to devise the additional countermeasures and conduct some experiments so as to distinguish LR with RSSI value.
 
-\section{conclusion}\label{sec:6}
+\section{Conclusion}\label{sec:6}
 In this paper, we have proposed RAP detection by using ARP failure under the MAC address duplication.
 We collect MAC addresses from user side and set the MAC address of a client to them.
 By observing ARP packets in the situation, we can reveal the benignancy of the connected AP.
@@ -452,7 +448,7 @@ In addition, the experiment in a small cafe shows the availability in a real net
 In the future, we will conduct a large-scaled examination of the proposed scheme.
 Furhermore, we will expand the scheme for the network where a LR is arranged.
 
-\section{acknowledgment}
+\section{Acknowledgment}
 This work is partly supported by the Grant in Aid for Scientific Research (No.17K06440) from Japan Society for Promotion of Science (JSPS).
 
 %\bibliographystyle{ieicetr}% bib style
@@ -463,7 +459,9 @@ This work is partly supported by the Grant in Aid for Scientific Research (No.17
 \bibliographystyle{IEEEtran}
 \bibliography{IEEE_ref}
 \vspace{12pt}
-\end{document}
+\profile{Kosuke Igarashi}{was born in Hokkaido, Japan in 1996. He received his B.S. degree from Keio University in 2020. He is a master student at Keio University. His research interest is security \& privacy for wireless communication.}
+\profile{Hiroya Kato}{was born in Gunma, Japan in 1994. He received his M.S degree from Keio University in 2019. He is a Ph.D student at Keio University. His research interest is security \& privacy for IoT. He is a member of IEICE and IEEE.}
+\profile{Iwao Sasase}{was born in Osaka, Japan in 1956. He received the B.E., M.E., and D.Eng. degrees in Electrical Engineering from Keio University, Yokohama, Japan, in 1979, 1981 and 1984, respectively. From 1984 to 1986, he was a Post Doctoral Fellow and Lecturer of Electrical Engineering at theUniversity of Ottawa,ON, Canada. He is currently a Professor of Information and Computer Science at Keio University, Yokohama, Japan. His research interests include modulation and coding, broadband mobile and  wireless communications, optical communications, communication networks and information theory. He has authored more than 284 journal papers and 430 international conference papers. He granted 45 Ph.D. degrees to his students in the above field. Dr. Sasase received the 1984 IEEE Communications Society (ComSoc) Student Paper Award (Region 10), 1986 Inoue Memorial Young Engineer Award, 1988 Hiroshi Ando Memorial Young EngineerAward, 1988 Shinohara MemorialYoung EngineerAward, 1996 Institute of Electronics, Information, and Communication Engineers (IEICE) of Japan Switching System Technical Group Best Paper Award, and WPMC2008 Best Paper Award. He is now serving as a Vice-President of IEICE. He served as President of the IEICE Communications Society (2012-2014). He was Board of Governors Member-at-Large (2010-2012), Japan Chapter Chair (2011-2012), Director of the Asia Pacific Region (2004-2005), Chair of the Satellite and Space Communications Technical Committee (2000-2002) of IEEE ComSoc., Vice President of the Communications Society (2004-2006), Chair of the Network System Technical Committee (2004-2006), Chair of the Communication System Technical Committee (2002-2004) of the IEICE Communications Society, Director of the Society of Information Theory and Its Applications in Japan (2001-2002). He is Fellowof IEICE, and Senior Member of IEEE, Member of the Information Processing Society of Japan.}
 %\profile{}{}
 %\profile*{}{}% without picture of author's face
 
