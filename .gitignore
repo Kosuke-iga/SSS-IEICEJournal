@@ -9,3 +9,7 @@ template.fdb_latexmk
 template.fls
 template.log
 template.synctex.gz
+starbucks/*
+attack-model/*
+figure/*
+flowchart/*
