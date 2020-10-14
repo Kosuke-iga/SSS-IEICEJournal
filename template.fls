@@ -1,4 +1,4 @@
-PWD /Users/kosukeigarashi/Desktop/keio/Lab./Journal/SSS-IEICEJournal
+PWD /Users/kosuke-i/Desktop/keio/Lab./Journal/ieice2.2
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf.cnf
@@ -47,13 +47,6 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/xstring/xstring.tex
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/carlisle/scalefnt.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/carlisle/scalefnt.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
