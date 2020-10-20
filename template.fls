@@ -199,4 +199,10 @@ INPUT starbucks/starbucks.pdf
 INPUT extractbb -B cropbox -O starbucks/starbucks.pdf
 INPUT template.bbl
 INPUT template.bbl
+INPUT ./photograph/igarashi.pdf
+INPUT extractbb -B cropbox -O ./photograph/igarashi.pdf
+INPUT ./photograph/kato_g.pdf
+INPUT extractbb -B cropbox -O ./photograph/kato_g.pdf
+INPUT ./photograph/sasase.pdf
+INPUT extractbb -B cropbox -O ./photograph/sasase.pdf
 INPUT template.aux
