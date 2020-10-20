@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.4.11)  14 OCT 2020 14:14
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.4.11)  20 OCT 2020 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -578,6 +578,6 @@ Here is how much of TeX's memory you used:
  21317 multiletter control sequences out of 15000+600000
  614671 words of font info for 134 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 32i,13n,37p,1971b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,13n,37p,1966b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on template.dvi (7 pages, 59952 bytes).
+Output written on template.dvi (7 pages, 59932 bytes).
