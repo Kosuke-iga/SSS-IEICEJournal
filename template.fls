@@ -1,4 +1,4 @@
-PWD /Users/kosuke-i/Desktop/keio/Lab./ieice2.2/UTF
+PWD /Users/kosuke-i/Desktop/keio/Lab./Journal/ieice2.2
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf.cnf
@@ -128,6 +128,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvr.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvri.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-BoldItalic-tlf-t1.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm
@@ -141,9 +144,6 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxmi15.tfm
@@ -169,4 +169,34 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
 OUTPUT template.dvi
+INPUT attack-model/attack-model.pdf
+INPUT extractbb -B cropbox -O attack-model/attack-model.pdf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxmi17.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxmi15.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsy7.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsy5.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
+INPUT flowchart/flowchart.pdf
+INPUT extractbb -B cropbox -O flowchart/flowchart.pdf
+INPUT figure/ACC.pdf
+INPUT extractbb -B cropbox -O figure/ACC.pdf
+INPUT figure/FPR.pdf
+INPUT extractbb -B cropbox -O figure/FPR.pdf
+INPUT figure/TPR.pdf
+INPUT extractbb -B cropbox -O figure/TPR.pdf
+INPUT starbucks/starbucks.pdf
+INPUT extractbb -B cropbox -O starbucks/starbucks.pdf
+INPUT template.bbl
+INPUT template.bbl
 INPUT template.aux
